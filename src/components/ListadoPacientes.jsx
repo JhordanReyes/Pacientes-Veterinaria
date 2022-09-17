@@ -1,7 +1,7 @@
 import React from 'react';
 import Paciente from './Paciente';
 
-const ListadoPacientes = ( { pacientes, setPaciente } ) => {
+const ListadoPacientes = ( { pacientes, setPaciente, eliminarPaciente } ) => {
 
   if(pacientes.length === 0){
     return (
@@ -26,6 +26,7 @@ const ListadoPacientes = ( { pacientes, setPaciente } ) => {
               paciente={paciente}
               key={paciente.id}
               setPaciente={setPaciente}
+              eliminarPaciente={eliminarPaciente}
             />
           ) )
         }
